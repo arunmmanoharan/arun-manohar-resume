@@ -1,6 +1,8 @@
 {
   "name": "portfolio",
-  "version": "0.1.0",
+  "version": "1.0.0",
+  "homepage": "https://arun-manohar-resume.herokuapp.com",
+  "author": "Arun Manohar Manoharan",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.17",

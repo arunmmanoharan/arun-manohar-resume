@@ -1,6 +1,11 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {map, uniqueId} from 'lodash';
+import profilePic from '../../../images/profile.jpg';
+import resume from '../../../files/ArunManoharResume.pdf';
+
+const element = document.createElement('div');
+document.body.appendChild(element);
 
 const About = (props) => {
 
@@ -10,7 +15,7 @@ const About = (props) => {
 		<section id='about'>
 			<div className='row'>
 				<div className='two columns'>
-					<img className='profile-pic' src={props.content.picture} alt={props.content.name}/>
+					<img className='profile-pic' src={profilePic} alt={props.content.name}/>
 				</div>
 				<div className='ten columns main-col'>
 					<h2>About Me</h2>
@@ -42,14 +47,13 @@ const About = (props) => {
 						</div>
 						<div className='columns download'>
 							<p>
-								<a href={'../../../files/ArunManoharResume.c0f6ec8b.pdf'} download={'Arun-Manohar-Resume.pdf'}
+								<a href={resume} download={'Arun-Manohar-Resume.pdf'}
 								   className='button'>
 									<i className='fa fa-download'>{''}</i>
 									Download Resume
 								</a>
 							</p>
 						</div>
-
 					</div>
 				</div>
 			</div>
