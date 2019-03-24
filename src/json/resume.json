@@ -2,7 +2,7 @@
   "basics": {
     "name": "Arun Manohar Manoharan",
     "label": "Software Engineer",
-    "picture": "/static/media/profile.ca903f4d.jpg",
+    "picture": "../../../images/profile.jpg",
     "email": "arun.manohar@nyu.edu",
     "phone": "+1 929-240-5612",
     "website": "https://arun-manohar-resume.herokuapp.com",

@@ -1,9 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
 import {map, uniqueId} from 'lodash';
-import pdf from '../../../files/ArunManoharResume.pdf';
-
-console.log(pdf);
 
 const About = (props) => {
 
@@ -45,7 +42,7 @@ const About = (props) => {
 						</div>
 						<div className='columns download'>
 							<p>
-								<a href={'/static/media/ArunManoharResume.c0f6ec8b.pdf'} download={'Arun-Manohar-Resume.pdf'}
+								<a href={'../../../files/ArunManoharResume.c0f6ec8b.pdf'} download={'Arun-Manohar-Resume.pdf'}
 								   className='button'>
 									<i className='fa fa-download'>{''}</i>
 									Download Resume
