@@ -1,12 +1,26 @@
+import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import {Route, Router, Switch} from 'react-router-dom';
+import {Provider} from 'react-redux';
+import './scss/default.scss';
+import './scss/layout.scss';
+import './scss/media-queries.scss';
+import './index.scss';
+import createStore from './store';
+import history from './history';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import NotFound from './components/NotFound/NotFound';
+import Home from './components/Home/Home';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+const store = createStore();
+
+const Routes = (
+	<Router history={history}>
+		<Switch>
+			<Route exact path="/" component={Home}/>
+			<Route path='*' component={NotFound}/>
+		</Switch>
+	</Router>);
+
+ReactDOM.render(<Provider store={store}>{Routes}</Provider>, document.getElementById('root'));
