@@ -55,6 +55,6 @@ const References = (props) => {
 	);
 };
 
-const mapStateToProps = state => ({content: state.default.references});
+const mapStateToProps = state => ({content: state.resumeDataReducer.data.references});
 
 export default connect(mapStateToProps)(References);

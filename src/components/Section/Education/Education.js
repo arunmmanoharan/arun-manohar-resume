@@ -43,6 +43,6 @@ const Education = (props) => (
 	</section>
 );
 
-const mapStateToProps = state => ({content: state.default.education});
+const mapStateToProps = state => ({content: state.resumeDataReducer.data.education});
 
 export default connect(mapStateToProps)(Education);

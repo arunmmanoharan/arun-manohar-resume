@@ -61,6 +61,6 @@ const About = (props) => {
 	);
 };
 
-const mapStateToProps = state => ({content: state.default.basics});
+const mapStateToProps = state => ({content: state.resumeDataReducer.data.basics});
 
 export default connect(mapStateToProps)(About);

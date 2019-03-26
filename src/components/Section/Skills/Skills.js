@@ -84,6 +84,6 @@ const Skills = (props) => {
 	);
 };
 
-const mapStateToProps = state => ({content: state.default.skills});
+const mapStateToProps = state => ({content: state.resumeDataReducer.data.skills});
 
 export default connect(mapStateToProps)(Skills);

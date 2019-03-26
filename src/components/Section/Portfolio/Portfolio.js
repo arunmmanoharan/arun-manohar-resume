@@ -39,6 +39,6 @@ const Portfolio = (props) => {
 	);
 };
 
-const mapStateToProps = state => ({content: state.default.publications});
+const mapStateToProps = state => ({content: state.resumeDataReducer.data.publications});
 
 export default connect(mapStateToProps)(Portfolio);

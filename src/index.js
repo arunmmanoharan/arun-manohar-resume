@@ -19,7 +19,7 @@ const Routes = (
 	<Router history={history}>
 		<Switch>
 			<Route exact path="/" component={Home}/>
-			<Route path='*' component={NotFound}/>
+			<Route path='/error' component={NotFound}/>
 		</Switch>
 	</Router>);
 

@@ -56,6 +56,6 @@ const Work = (props) => {
 	);
 };
 
-const mapStateToProps = state => ({content: state.default.work});
+const mapStateToProps = state => ({content: state.resumeDataReducer.data.work});
 
 export default connect(mapStateToProps)(Work);

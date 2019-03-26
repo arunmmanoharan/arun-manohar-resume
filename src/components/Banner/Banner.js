@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {connect} from 'react-redux';
 import SocialMedia from '../SocialMedia/SocialMedia';
+import {get} from 'lodash';
 
 const Banner = props => {
 
@@ -27,7 +28,7 @@ const Banner = props => {
 
 const mapStateToProps = state => {
 	return {
-		basics: state.default.basics
+		basics: get(state.resumeDataReducer.data, 'basics')
 	};
 };
 
