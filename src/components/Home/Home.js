@@ -1,4 +1,4 @@
-import React, {Fragment, PureComponent} from 'react';
+import React, {Fragment, useEffect} from 'react';
 import {connect} from 'react-redux';
 import Header from '../Header/Header';
 import Navigation from '../Navigation/Navigation';
@@ -9,30 +9,28 @@ import Footer from '../Footer/Footer';
 import {fetchResumeData} from './HomeActions';
 import {isEmpty} from 'lodash';
 
-class Home extends PureComponent {
+const Home = (props) => {
 
-	componentDidMount() {
-		this.props.fetchResumeData();
-	}
+	useEffect(() => {
+		return props.fetchResumeData();
+	}, []);
 
-	render() {
-		return (
+	return (
+		<Fragment>
+			{!isEmpty(props.data) &&
 			<Fragment>
-				{!isEmpty(this.props.data) &&
-				<Fragment>
-					<Header>
-						<Navigation/>
-						<Banner/>
-						<ScrollDown/>
-					</Header>
-					<Section/>
-					<Footer/>
-				</Fragment>
-				}
+				<Header>
+					<Navigation/>
+					<Banner/>
+					<ScrollDown/>
+				</Header>
+				<Section/>
+				<Footer/>
 			</Fragment>
-		);
-	}
-}
+			}
+		</Fragment>
+	);
+};
 
 const mapStateToProps = state => ({data: state.resumeDataReducer.data});
 
