@@ -13,7 +13,7 @@ const Header = props => {
 		return () => {
 			return window.addEventListener('resize', updateDimensions);
 		};
-	}, []);
+	}, [window]);
 
 
 	const style = {

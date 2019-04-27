@@ -9,7 +9,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.8.1",
     "@fortawesome/react-fontawesome": "^0.1.4",
     "axios": "^0.18.0",
-    "babel-polyfill": "^6.26.0",
+    "core-js": "^3.0.1",
     "font-awesome": "^4.7.0",
     "history": "^4.9.0",
     "lodash": "^4.17.11",
@@ -24,6 +24,7 @@
     "react-transition-group": "^4.0.0",
     "redux": "^4.0.1",
     "redux-thunk": "^2.3.0",
+    "regenerator-runtime": "^0.13.2",
     "serve": "^11.0.0"
   },
   "scripts": {
