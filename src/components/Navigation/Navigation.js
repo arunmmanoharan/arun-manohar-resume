@@ -2,6 +2,11 @@ import React from 'react';
 import NavLink from './NavLink';
 import navigation from '../../constants';
 import {keys, map, uniqueId} from 'lodash';
+import {ANGULAR_URL} from '../../constants/URL_Constants';
+
+const handleGoToAngular = () => {
+	window.open(ANGULAR_URL, '_self');
+};
 
 const Navigation = () => (
 	<nav id='nav-wrap' className='opaque' style={{background: '#313131'}}>
@@ -17,6 +22,7 @@ const Navigation = () => (
 				);
 			})}
 		</ul>
+		<button id="goToAngular" onClick={handleGoToAngular}> Switch to Angular Version</button>
 	</nav>
 );
 

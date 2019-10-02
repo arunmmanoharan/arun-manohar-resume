@@ -5,7 +5,7 @@ const navigation = {
 	education: 'Education',
 	skill: 'Skills',
 	projects: 'Projects',
-	references: 'References'
+	references: 'References',
 };
 
 export default navigation;
