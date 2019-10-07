@@ -1,11 +1,15 @@
-import React, {useEffect, useState } from 'react';
+import React, {Fragment, useEffect, useState} from 'react';
 import NavLink from './NavLink';
 import navigation from '../../constants';
 import {keys, map, uniqueId} from 'lodash';
-import {ANGULAR_URL} from '../../constants/URL_Constants';
+import {ANGULAR_URL, VUE_URL} from '../../constants/URL_Constants';
 
 const handleGoToAngular = () => {
 	window.open(ANGULAR_URL, '_self');
+};
+
+const handleGoToVue = () => {
+	window.open(VUE_URL, '_self');
 };
 
 const Navigation = () => {
@@ -46,7 +50,12 @@ const Navigation = () => {
 					);
 				})}
 			</ul>
-			{isButtonVisible && <button id="goToAngular" onClick={handleGoToAngular}> Switch to Angular Version</button>}
+			{isButtonVisible &&
+			<Fragment>
+				<button id="goToAngular" onClick={handleGoToAngular} style={{marginRight: '20px'}}> Switch to Angular Version</button>
+				<button id="goToVue" onClick={handleGoToVue}> Switch to Vue Version</button>
+			</Fragment>
+			}
 		</nav>
 	);
 };
