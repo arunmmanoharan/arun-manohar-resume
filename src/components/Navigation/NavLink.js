@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {startsWith} from 'lodash';
 
 const NavLink = props => {
 
@@ -13,7 +14,7 @@ const NavLink = props => {
 			   onMouseLeave={handleMouseLeave}
 			   style={style}
 			   className='smoothscroll'
-			   href={`#${props.link}`}>
+			   href={startsWith(props.link, 'http') ? props.link : `#${props.link}`}>
 				{props.name}
 			</a>
 		</li>
