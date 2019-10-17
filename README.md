@@ -2,6 +2,8 @@ This project was bootstrapped with [Create React Home](https://github.com/facebo
 
 ## Available Scripts
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/a2441918/arun-manohar-resume.svg)](https://greenkeeper.io/)
+
 In the project directory, you can run:
 
 ### `npm start`
