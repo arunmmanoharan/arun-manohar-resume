@@ -16,7 +16,7 @@
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
-    "nuka-carousel": "^4.6.2",
+    "nuka-carousel": "^4.6.3",
     "path": "^0.12.7",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
