@@ -7,7 +7,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.27",
     "@fortawesome/free-solid-svg-icons": "^5.12.1",
-    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@fortawesome/react-fontawesome": "^0.1.9",
     "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "express": "^4.17.1",
@@ -16,7 +16,7 @@
     "lodash": "^4.17.15",
     "moment": "^2.24.0",
     "node-sass": "^4.13.1",
-    "nuka-carousel": "^4.6.4",
+    "nuka-carousel": "^4.6.5",
     "path": "^0.12.7",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
