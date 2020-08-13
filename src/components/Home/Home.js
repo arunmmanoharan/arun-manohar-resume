@@ -11,9 +11,11 @@ import {isEmpty} from 'lodash';
 
 const Home = (props) => {
 
+	const {fetchResumeData} = props;
+
 	useEffect(() => {
-		return props.fetchResumeData();
-	}, []);
+		fetchResumeData();
+	}, [fetchResumeData]);
 
 	return (
 		<Fragment>

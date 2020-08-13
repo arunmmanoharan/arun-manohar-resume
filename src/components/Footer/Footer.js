@@ -1,5 +1,6 @@
 import React from 'react';
 import {connect} from 'react-redux';
+import { HashLink as Link } from 'react-router-hash-link';
 import SocialMedia from '../SocialMedia/SocialMedia';
 
 const Footer = (props) => {
@@ -10,9 +11,9 @@ const Footer = (props) => {
 					<SocialMedia ulClass='social-links' profiles={props.content.profiles}/>
 				</div>
 				<div id='go-top'>
-					<a className='smoothscroll' title='Back to Top' href='#home'>
+					<Link className='smoothscroll' title='Back to Top' to='#home'>
 						<i className='icon-up-open'/>
-					</a>
+					</Link>
 				</div>
 			</div>
 		</footer>

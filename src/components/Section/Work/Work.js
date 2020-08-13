@@ -20,7 +20,7 @@ const Entry = (props) => {
 				<p className='info'>
 					{props.entry.position}
 					<span> &bull; </span>
-					<span className='info-summary'>{props.entry.summary}</span>
+					<span className='info-summary'>{props.entry.location}</span>
 					<span> &bull; </span>
 					<em className='date'>{startDate} - {endDate}</em>
 				</p>

@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import {startsWith} from 'lodash';
+import { HashLink as Link } from 'react-router-hash-link';
 
 const NavLink = props => {
 
@@ -10,13 +11,13 @@ const NavLink = props => {
 
 	return (
 		<li>
-			<a onMouseEnter={handleMouseEnter}
+			<Link onMouseEnter={handleMouseEnter}
 			   onMouseLeave={handleMouseLeave}
 			   style={style}
 			   className='smoothscroll'
-			   href={startsWith(props.link, 'http') ? props.link : `#${props.link}`}>
+			   to={startsWith(props.link, 'http') ? props.link : `#${props.link}`}>
 				{props.name}
-			</a>
+			</Link>
 		</li>
 	);
 };
