@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 
 const Header = props => {
 
-	const [window, updateDimensions] = useState({
+	const [state, setState] = useState({
 		window: {
 			height: 0,
 			width: 0
@@ -10,14 +10,24 @@ const Header = props => {
 	});
 
 	useEffect(() => {
+		window.addEventListener('resize', updateDimensions);
 		return () => {
-			return window.addEventListener('resize', updateDimensions);
-		};
-	}, [window]);
+			updateDimensions();
+		}
+	}, []);
+
+	const updateDimensions = () => {
+		setState({
+			window: {
+				height: window.innerHeight,
+				width: window.innerWidth
+			}
+		});
+	}
 
 
 	const style = {
-		height: window.height
+		height: state.window.height
 	};
 
 	return (
