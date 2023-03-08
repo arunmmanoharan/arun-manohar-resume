@@ -7,7 +7,7 @@ const Entry = (props) => (
 	<div className='row item'>
 		<div className='twelve columns'>
 			<h3>
-				<a href={props.entry.website}>{props.entry.name}</a>
+				<a>{props.entry.name}</a>
 			</h3>
 			<p className='info'>
 				<span className='info-summary'>{props.entry.summary}</span>
