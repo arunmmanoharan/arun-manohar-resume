@@ -1,3 +1,2 @@
-const API = 'http://localhost:3555/';
-
+const API = 'http://arun-manohar-resume-api.herokuapp.com/';
 export default API;
