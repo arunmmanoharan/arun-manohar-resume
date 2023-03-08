@@ -1,8 +1,8 @@
 import 'core-js/stable';
 import 'regenerator-runtime/runtime';
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {Route, HashRouter, Switch} from 'react-router-dom';
+import { createRoot } from 'react-dom/client';
+import {Route, HashRouter, Routes} from 'react-router-dom';
 import {Provider} from 'react-redux';
 import './scss/default.scss';
 import './scss/layout.scss';
@@ -15,12 +15,20 @@ import Home from './components/Home/Home';
 
 const store = createStore();
 
-const Routes = (
+const RoutesComponent = (
 	<HashRouter>
-		<Switch>
-			<Route exact path="/" component={Home}/>
-			<Route path='/error' component={NotFound}/>
-		</Switch>
+		<Routes>
+			<Route path="/" element={<Home />}/>
+			<Route path='/error' element={<NotFound />}/>
+		</Routes>
 	</HashRouter>);
 
-ReactDOM.render(<Provider store={store}>{Routes}</Provider>, document.getElementById('root'));
+let container = null;
+
+document.addEventListener('DOMContentLoaded', () => {
+	if (!container) {
+		container = document.getElementById('root');
+		const root = createRoot(container);
+		root.render(<Provider store={store}>{RoutesComponent}</Provider>);
+	}
+});

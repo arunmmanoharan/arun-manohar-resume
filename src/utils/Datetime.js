@@ -1,14 +1,13 @@
-import moment from 'moment';
+import {format, parseISO, isAfter} from 'date-fns';
 
 const Datetime = {
 	getDisplayFromDate: (datetime) => {
 		const applyFunc = () => {
-			const d = moment(datetime, 'YYYY-MM-DD');
-			const date = d.date();
-			if (date > 20) {
-				return d.add(1, 'months').format('MMM YYYY');
+			const date = parseISO(datetime);
+			if (isAfter(date, new Date(2023, 2, 20))) {
+				return format(date, 'MMM yyyy');
 			}
-			return d.format('MMM YYYY');
+			return format(date, 'MMM yyyy', { addSuffix: true });
 		};
 		return datetime === 'Present' ? datetime : applyFunc();
 	}
